@@ -342,14 +342,10 @@
 		stop: stop
 	};
 
-	// TODO: Test these. I'm really just guessing.
-	if (typeof GLOBAL.define === 'function') {
-		GLOBAL.define(phantomLimb);
-	} else if (typeof GLOBAL.exports !== 'undefined') {
-		GLOBAL.exports = phantomLimb;
-	} else {
-		GLOBAL.phantomLimb = phantomLimb;
-	}
+
+	
+	GLOBAL.phantomLimb = phantomLimb;
+	
 
 	if (config.startOnLoad) start();
 }(this));
